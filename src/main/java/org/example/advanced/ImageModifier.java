@@ -25,7 +25,7 @@ public class ImageModifier {
 
         Properties properties = PropertiesReader.readProperties(args);
 
-        try (InputStream sourceImage = new FileInputStream(new File(properties.getSourcePath()))) {
+        try (InputStream sourceImage = new FileInputStream(properties.getSourcePath())) {
             BufferedImage read = ImageIO.read(sourceImage);
             Graphics2D graphics2D = (Graphics2D) read.getGraphics();
             graphics2D.setFont(new Font(properties.getFontFamily(), Font.PLAIN, properties.getFontSize()));

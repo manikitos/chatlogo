@@ -13,11 +13,11 @@ public class SimpleImageModifier {
         try (InputStream sourceImage = new FileInputStream(new File("src/main/resources/source.jpg"))) {
             BufferedImage read = ImageIO.read(sourceImage);
             Graphics2D g = (Graphics2D) read.getGraphics();
-            g.setFont(new Font("JetBrains Mono", Font.PLAIN, 80));
+            g.setFont(new Font("JetBrains Mono", Font.PLAIN, 110));
             g.setColor(new Color(242, 96, 117));
             g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,
                     RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB);
-            g.drawString("16", 250, 220);
+            g.drawString("16", 235, 230);
             g.dispose();
             ImageIO.write(read, "jpg", new File("src/main/resources/image.jpg"));
         } catch (Exception e) {
